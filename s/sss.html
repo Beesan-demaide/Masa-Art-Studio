@@ -1,0 +1,164 @@
+<!--
+<?php
+$hostname = 'localhost';
+$dbuser = 'sqluser';
+$dbpassword = 'password';
+$dbname = 'masaartstudio';
+echo "im here";
+if(isset($_POST['SignUpBTN']))
+{   
+    
+$Username = $_POST['REGusername'];
+$Email = $_POST['REGemail'];
+$Password = $_POST['REGpassword'];
+
+    try {
+        $db = new mysqli($hostname, $dbuser, $dbpassword, $dbname);
+        $sql = "INSERT INTO user (First_name,password,Email,address) VALUES ('$Username','$Password','$Email',null);";
+        $res = $db->query($sql);
+        echo "hi";
+        $db->commit();
+        $db->close();
+    }
+    catch(Exception $e){
+        echo $e;
+    }
+}
+
+if (isset($_POST['LoginBTN'])) {
+    $INUsername = $_POST['INusername'];
+    $INPassword = $_POST['INpassword'];
+
+    try {
+
+        $db = new mysqli($hostname, $dbuser, $dbpassword, $dbname);
+        $sql = "SELECT * FROM user WHERE First_name='$INUsername', password='$INPassword'";
+
+        $res = $db->query($sql);
+        $row = $res->fetch_object();
+
+        if ($row != null) {
+            //go to our page
+            echo "hoooo";
+
+        } else {
+            die("Something Went Wrong!");
+        }
+        $db->close();
+    } catch (Exception $e) {
+        echo $e;
+    }
+}
+
+?>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAS/SignUp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=0.1">
+    <script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous"
+        ></script>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form action="/SignUp.php" method="POST" class="sign-in-form">
+            <h2 class="title">Sign-in</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" name="INemail" placeholder="Email">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="INpassword" placeholder="Password">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="INpassword" placeholder="Password">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="INpassword" placeholder="Password">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="INpassword" placeholder="Password">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="INpassword" placeholder="Password">
+            </div>
+                <button type="submit" name="LoginBTN" value="Login" class="btn solid">Edit User</button>
+                <p class="social-text">Follow Us on Social Media</p>
+               <div class="social-media">
+               <a herf="#" class="social-icon">
+                   <i class="fab fa-facebook-f"></i></a>
+                   <a herf="#" class="social-icon">
+                       <i class="fab fa-twitter"></i></a>
+                   <a herf="#" class="social-icon">
+                       <i class="fab fa-instagram"></i></a>
+                   <a herf="#" class="social-icon">
+                       <i class="fab fa-pinterest"></i></a>
+               </div>
+            </form>
+
+            <form action="/SignUp.php" method="POST" class="sign-up-form">
+                <h2 class="title">Sign-Up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="REGusername" placeholder="username">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text"  name="REGemail" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock "></i>
+                    <input type="password" name="REGpassword" placeholder="Password">
+                </div>
+                <button type="submit" name="SignUpBTN" value="Sign up" class="btn solid">Sign Up </button>
+                <p class="social-text">Follow Us on Social Media</p>
+                <div class="social-media">
+                    <a herf="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i></a>
+                    <a herf="#" class="social-icon">
+                        <i class="fab fa-twitter"></i></a>
+                    <a herf="#" class="social-icon">
+                        <i class="fab fa-google"></i></a>
+                    <a herf="#" class="social-icon">
+                        <i class="fab fa-pinterest"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel Left-panel">
+            <div class="content">
+                <h3>NEW here?</h3>
+                    <br>
+                <button class="btn" id="sign-up-btn">Sign up</button>
+            </div>
+            <img src="m.png"class="image" alt="" >
+        </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of us ?</h3><br>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+            </div>
+                <img src="b.png" class="image" alt="">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

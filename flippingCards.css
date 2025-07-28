@@ -1,0 +1,114 @@
+.maincontainer{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    float: left;
+    text-align: center;
+    margin-left: 35px;
+}
+.thecard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: float 5s ease-in-out infinite;
+    margin-top:100px;
+
+}
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+}
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+#space{
+    display: none;
+}
+.Artshop .title{
+    text-align: center;
+}
+.Artshop .title span
+{
+    font-size: 40px;
+    background: #FCD5CE;
+    color: #FFB5A7;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.8rem;
+}
+.About .title span
+{
+    font-size: 40px;
+    background: #FCD5CE;
+    color: #FFB5A7;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.8rem;
+}
+.MyWork .title span
+{
+    font-size: 40px;
+    background: #FCD5CE;
+    color: #FFB5A7;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.8rem;
+    
+}
+.reviews .title span
+{
+    font-size: 40px;
+    background: #FCD5CE;
+    color: #FFB5A7;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.8rem;
+}
+.About .title{
+    display: inline-block;
+    margin-bottom: 300px;
+}
+#Artshop-title{
+    margin-top: 100px;
+    margin-left: 630px;
+}
+#MyWork-title{
+    margin-bottom: 200px;
+    margin-left: 640px;
+}
+#Reviews-title{
+    margin-left: 640px;
+    margin-bottom: 200px;
+}
+.titlee{
+    margin-left: 600px;
+    margin-bottom: 200px;
+}
+#AboutMe-title{
+    color: #d4a373;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: rotateY(180deg);  
+    }
+    75%{
+        transform: translateY(-15px);
+       
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+

@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "masaartstudio",
+            "group": "masaartstudio",
+            "database": "masaartstudio",
+            "username": "sqluser",
+            "password": "password"
+        }
+    ],
+    "liveServer.settings.port": 5501
+}

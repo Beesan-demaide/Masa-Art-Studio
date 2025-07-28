@@ -1,0 +1,75 @@
+.pic1{
+    float: left;
+    transition: 0.5s;
+    margin-right: 25px;
+    border-radius: 0.6rem;
+    border: 1px solid #F2E4E7;
+}
+.pic2{
+    float: left;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    margin-right: 25px;
+    border-radius: 0.6rem;
+    border: 1px solid #F2E4E7;
+}
+.pic3{
+    float: left;
+    margin-bottom: 50px;
+    transition: 0.5s;
+    margin-right: 25px;
+    border-radius: 0.6rem;
+    border: 1px solid #F2E4E7;
+}
+.pic4{
+    float: left;
+    transition: 0.5s;
+    margin-right: 25px;
+    border-radius: 0.6rem;
+    border: 1px solid #F2E4E7;
+}
+
+.Artshop .box_border{
+    background-color: #ffff;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);;
+}
+.Artshop .box_border .contentt{
+    border-radius: 0.5rem;
+    font-size: 15px;
+    overflow: hidden;  
+    align-items: center;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+    display: grid;
+}
+.Artshop .box_border .contentt img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}   
+.Artshop .title span.space{
+    background: none;
+}
+.MyWork .title {
+    margin-bottom: 100px;
+}
+.pic1:hover{
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px #FFF0F3,-5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+.pic2:hover{
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px #FFF0F3,-5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+.pic3:hover{
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px #FFF0F3,-5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+.pic4:hover
+{
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px #FFF0F3,-5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+.pictures{
+    margin-left: 300px;
+    margin-bottom: 800px;
+}

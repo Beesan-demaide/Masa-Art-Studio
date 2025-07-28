@@ -1,0 +1,47 @@
+.home
+{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+    min-height: 100vh;
+}
+.home .content
+{
+    text-align: center;
+}
+.home .video-container video
+{
+    position:absolute;
+    top: 0; left:0;
+    height:100%;
+    z-index: -1;
+    width:100%;
+    object-fit: cover;
+
+}
+.home .controls {
+    padding: 1.2rem;
+    border-radius: 3rem;
+    top: 5rem;
+    position:relative;
+    background-color: rgba(0,0,0,.7);
+}
+p#enter
+{
+    font-size:20px;
+    font-family:EB Garamond;
+    color: #000000;
+    text-align: center;
+}
+.home .content h3
+{
+    font-size: 4.5rem;
+    text-align: left;
+    text-transform: uppercase;
+    color: #E3E6F3;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    text-align: center;
+}
